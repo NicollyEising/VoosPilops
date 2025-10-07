@@ -1,16 +1,13 @@
 import express, { Router, Request, Response } from 'express';
 import fs from 'fs';
-import cors from "cors"; // <--- import
-
-
-
+import cors from "cors";
 
 const app = express();
 const route = Router();
 
 app.use(express.json());
 
-app.use(cors()); // <--- habilita CORS para todas as origens
+app.use(cors());
 app.use(express.json());
 
 const flight = JSON.parse(fs.readFileSync('flightHistory.json', 'utf8'));
