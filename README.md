@@ -18,6 +18,12 @@ O frontend exibe a lista de voos e uma página de detalhes.
 
 ## Backend
 
+### Decisões técnicas
+
+* Utilização de **Node.js/Express** para simplicidade e facilidade de integração com TypeScript.
+* Persistência em **JSON local** (`flightHistory.json`) para prototipagem rápida.
+* Endpoints estruturados para suportar **paginação** e total de saldo acumulado.
+
 ### Instalação de dependências
 
 ```bash
@@ -44,19 +50,22 @@ npm install --save-dev jest ts-jest @types/jest supertest @types/supertest
 npx jest
 ```
 
----
-
 ### Endpoints disponíveis (porta padrão 3030)
 
-* **GET /flights**
-     
-* **GET /flights/:id**
+* **GET /flights** – Lista voos com suporte a paginação.
+* **GET /flights/:id** – Retorna detalhes de um voo específico.
+* **GET /totalBalance** – Retorna o saldo total acumulado de todos os voos.
 
-* **GET /totalBalance**
+---
 
+## Frontend (Vite + React)
 
+### Decisões técnicas
 
-## Frontend (Vite)
+* Utilização de **Vite** para desenvolvimento rápido.
+* Componentização em **React** com TypeScript para maior previsibilidade.
+* Paginação fixa e tabela responsiva para exibição de voos.
+* Página de detalhes apresenta recompensas, XP e bônus de missão de forma clara.
 
 ### Instalação
 
@@ -73,3 +82,8 @@ npm run dev
 
 ---
 
+## Melhorias com mais tempo
+
+* **Hospedar backend no Vercel** para que o frontend acesse a API sem depender de `localhost`.
+* Adicionar **armazenamento em banco de dados real** (ex: PostgreSQL ou MongoDB).
+* Implementar **tratamento de erros mais robusto** no frontend, incluindo notificações visuais.
