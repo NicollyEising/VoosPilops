@@ -58,5 +58,5 @@ route.get("/totalBalance", (req: Request, res: Response) => {
 
 app.use(route);
 
-// Export para Vercel
 export default app;
+
