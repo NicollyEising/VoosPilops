@@ -10,7 +10,7 @@ O frontend exibe a lista de voos e uma página de detalhes.
 
 ## Requisitos
 
-* Node.js (v16+ recomendado)
+* Node.js
 * npm ou yarn
 * TypeScript
 
