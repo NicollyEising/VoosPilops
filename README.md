@@ -82,8 +82,3 @@ npm run dev
 
 ---
 
-## Melhorias com mais tempo
-
-* **Hospedar backend no Vercel** para que o frontend acesse a API sem depender de `localhost`.
-* Adicionar **armazenamento em banco de dados real** (ex: PostgreSQL ou MongoDB).
-* Implementar **tratamento de erros mais robusto** no frontend, incluindo notificações visuais.
